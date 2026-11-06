@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Navbar() {
+export function Navbar() {
 	return (
 		<nav>
 			<div>
