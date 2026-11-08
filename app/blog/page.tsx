@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/posts";
-import { getPostBySlug } from "@/lib/posts";
+import Link from "next/link";
 
 export const metadata: Metadata = {
 	title: "Blog",
@@ -8,14 +8,18 @@ export const metadata: Metadata = {
 };
 
 export default function Blog() {
-	//Test the getALlPosts function
 	const posts = getAllPosts();
-	console.log(posts);
-	//End of test
 	return (
 		<main>
-			<h1>Blog</h1>
-			<p>Articles, thoughts, and updates.</p>
+			<h1>Post History: </h1>
+			<ul>
+				{posts.map((post) =>
+					<li key={post.slug}>
+						<Link href={`/blog/${post.slug}`}>{post.title}</Link>
+						<p>{post.summary}</p>
+					</li>
+				)}
+			</ul>
 		</main>
 	);
 }
