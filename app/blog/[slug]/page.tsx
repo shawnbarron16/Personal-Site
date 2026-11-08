@@ -1,5 +1,6 @@
 import { getPostBySlug } from "@/lib/posts";
 import { getAllPosts } from "@/lib/posts";
+import ReactMarkdown from "react-markdown";
 
 export async function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -16,7 +17,7 @@ export default async function PostPage({
     return(
         <main>
             <h1>{post.title}</h1>
-            <p>{post.summary}</p>
+            <ReactMarkdown>{post.content}</ReactMarkdown>
         </main>
     )
 }
