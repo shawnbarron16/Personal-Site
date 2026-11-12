@@ -20,9 +20,11 @@ export default async function PostPage({
     }
 
     return(
-        <main>
-            <h1>{post.title}</h1>
-            <ReactMarkdown>{post.content}</ReactMarkdown>
+        <main className="mx-auto max-w-2xl px-6 py-16">
+            <h1 className="text-4xl font-bold">{post.title}</h1>
+            <div className="mt-4 text-lg">
+                <ReactMarkdown>{post.content}</ReactMarkdown>
+            </div>
         </main>
     )
 }
