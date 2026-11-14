@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
+// Expose both fonts through CSS variables consumed by the Tailwind theme.
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -14,8 +15,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// The template is applied to titles declared by child routes.
 export const metadata: Metadata = {
-  title: "Shawn Barron Portfolio",
+  title: {
+    default: "Shawn Barron | Portfolio",
+    template: "%s | Shawn Barron",
+  },
   description: "A custom, handcrafted portfolio and blog site.",
 };
 
