@@ -4,8 +4,8 @@ const linkedin = "https://www.linkedin.com/in/shawn-barron16/"
 
 export function Footer() {
     return(
-        <footer>
-            <ul>
+        <footer className="py-6 bg-gray-900">
+            <ul className="flex justify-center gap-6">
                 <li><a href={linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                 <li><a href={github} target="_blank" rel="noopener noreferrer">GitHub</a></li>
                 <li><a href={`mailto:${email}`}>Email: {email}</a></li>
