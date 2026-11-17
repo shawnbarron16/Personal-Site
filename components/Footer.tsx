@@ -6,9 +6,9 @@ export function Footer() {
     return(
         <footer className="py-6 bg-gray-900">
             <ul className="flex justify-center gap-6">
-                <li><a href={linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href={github} target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href={`mailto:${email}`}>Email: {email}</a></li>
+                <li><a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">LinkedIn</a></li>
+                <li><a href={github} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">GitHub</a></li>
+                <li><a href={`mailto:${email}`} className="text-gray-300 hover:text-white transition-colors">Email: {email}</a></li>
             </ul>
         </footer>
     )
