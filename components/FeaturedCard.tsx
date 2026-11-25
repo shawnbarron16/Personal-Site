@@ -18,6 +18,7 @@ export default function FeaturedCard({
 }: FeaturedCardProps) {
   return (
     <Link href={href}>
+      <h2 className="text-center mb-5">{title}</h2>
       <div className="relative aspect-video overflow-hidden rounded-lg">
         <Image
           src={image}
@@ -28,8 +29,7 @@ export default function FeaturedCard({
           className="object-cover"
         />
       </div>
-      <h2>{title}</h2>
-      <p>{description}</p>
+      <p className="text-center mt-5">{description}</p>
     </Link>
   );
 }
